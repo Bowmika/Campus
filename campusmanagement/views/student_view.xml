@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Form View-->
+        <record id="view_cam_student_student_form" model="ir.ui.view">
+            <field name="name">student.student.form</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <form string="Student">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="roll_no"/>
+                                <field name="student_date_of_birth" attrs="{'readonly':[('age', '&lt;', 18)]}"/>
+                                <field name="present_days" widget = "boolean_toggle" />
+                                <field name="absent_days" widget = "boolean_toggle"/>
+
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--Tree Views-->
+        <record id="view_cam_student_student_tree" model="ir.ui.view">
+            <field name="name">student.student.tree</field>
+            <field name="model">student.student</field>
+            <field name="arch" type="xml">
+                <tree string="student">
+                    <field name="name"/>
+                                <field name="roll_no"/>
+                                <field name="student_date_of_birth"/>
+                                <field name="present_days"/>
+                                <field name="absent_days"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record id="action_cam_student_student" model="ir.actions.act_window">
+            <field name="name">student</field>
+            <field name="res_model">student.student</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <!--Menus-->
+        <menuitem id="campus_menu" name="Campus" sequence="1"/>
+        <menuitem id="cam_student_menu" name="Student" sequence="2" action="action_cam_student_student" parent="campus_menu"/>
+
+    </data>
+</odoo>
