@@ -12,10 +12,11 @@
                             <group>
                                 <field name="name"/>
                                 <field name="roll_no"/>
-                                <field name="student_date_of_birth" attrs="{'readonly':[('age', '&lt;', 18)]}"/>
-                                <field name="present_days" widget = "boolean_toggle" />
-                                <field name="absent_days" widget = "boolean_toggle"/>
-
+                                <field name="age" />
+                                <field name="dob"/>
+                                <field name="present" />
+                                <field name="absent"/>
+                                <field name="teacher_id"/>
                             </group>
                         </group>
                     </sheet>
@@ -30,11 +31,12 @@
             <field name="arch" type="xml">
                 <tree string="student">
                     <field name="name"/>
-                                <field name="roll_no"/>
-                                <field name="student_date_of_birth"/>
-                                <field name="present_days"/>
-                                <field name="absent_days"/>
-
+                    <field name="roll_no"/>
+                      <field name="age"/>
+                    <field name="dob"/>
+                    <field name="present"/>
+                    <field name="absent"/>
+                    <field name="teacher_id"/>
                 </tree>
             </field>
         </record>
