@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
-    <data>
+
 
         <!-- Form View-->
         <record id="view_cam_subject_subject_form" model="ir.ui.view">
@@ -36,12 +36,12 @@
        <record id="action_cam_sub" model="ir.actions.act_window">
             <field name="name">Subject</field>
             <field name="res_model">subject.subject</field>
-            <field name="view_mode">tree,form</field>
+            <field name="view_mode">tree,kanban, form</field>
         </record>
 
         <!--Menus-->
 
         <menuitem id="subject_menu" name="Subject" sequence="5" action="action_cam_sub" parent="campus_menu"/>
 
-    </data>
+
 </odoo>

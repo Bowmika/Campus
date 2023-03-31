@@ -10,6 +10,8 @@ class Teacher(models.Model):
     age = fields.Integer(string="Age")
     present= fields.Integer(string="Present")
     absent= fields.Integer(string="Absent")
+    meeting_start = fields.Datetime(string="Meeting Start")
+    meeting_end = fields.Datetime(string="meeting End")
     student_details = fields.One2many('student.details', 'teacher_id', string='Student Details')
 
 

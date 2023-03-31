@@ -11,3 +11,4 @@ class Student(models.Model):
     present = fields.Integer(string="Present")
     absent = fields.Integer(string="Absent")
     teacher_id = fields.Many2one('teacher.teacher', string="Teacher id")
+    image = fields.Image(string= 'Image')
