@@ -21,4 +21,4 @@ class StudentDetails(models.Model):
     teacher_id = fields.Many2one('teacher.teacher', string='Teacher')
     student_id = fields.Many2one('student.student', string='Student',domain="[('teacher_id','=',teacher_id)]")
     teacher_emp = fields.Integer(related='teacher_id.employee_id', string='Teacher emp')
-    subject_ids = fields .Many2many('subject.subject',string='Subject')
+    subject_ids = fields .Many2many('subject.subject', string='Subject')
